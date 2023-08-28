@@ -13,6 +13,8 @@ public class EmulatorCheck {
                 || Build.MODEL.startsWith("sdk_")
                 || Build.DEVICE.startsWith("emulator")
                 || (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
+                || Build.PRODUCT.toLowerCase().contains("nox")
+                || Build.BOARD.toLowerCase().contains("nox")
                 || "google_sdk".equals(Build.PRODUCT);
     }
 
